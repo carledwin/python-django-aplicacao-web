@@ -1,0 +1,55 @@
+pip - python install package
+
+1 - criando o ambiente no virtualenv
+cd curso-udemy-python-31min
+virtualenv venv
+
+2 - iniciando o ambiente venv
+cd venv
+source venv/bin/activate
+
+3 - instalando o django no ambiente venv
+cd venv
+pip3 install Django==2.0
+
+4 - consultando as dependencias instaladas no venv
+pip freeze
+
+5 - criando pasta de trabalho
+cd curso-udemy-python-31min
+mkdir workspace_django
+cd workspace_django
+
+6 - instalando python-django / python3-django
+sudo apt-get install python3-django
+
+7 - criando um novo projeto com django-admin
+cd workspace_django
+django-admin startproject pj_produtos
+
+8 - iniciando o projeto
+cd pj_produtos
+python3 manage.py runserver
+
+9 - acessando a api via browser
+http://localhost:8000
+
+10 - criando as tabelas  no  banco de dados (admin, auth, user....)
+python3 manage.py migrate
+
+11 - criando um novo usuario
+python3 manage.py createsuperuser
+username: carl
+email: carl@email.com
+password: senha123
+
+12 - acessando python-django-admin
+http://localhost:8000/admin
+
+13 - criando um app
+python3 manage.py startapp app_items
+
+14 - atualizando o banco de dados criando novas tabelas para o app_items criado recentemente 
+python3 manage.py makemigrations app_items
+python3 manage.py migrate
+
